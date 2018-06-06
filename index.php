@@ -1,7 +1,8 @@
-<?php
-$json = file_get_contents(_DIR_."/phones.json");
+<? php
+$json = file_get_contents(_DIR_ . '/phones.json');
 $data = json_decode($json, true);
 ?>
+
 <html>
 <head>
   <meta charset="UTF-8">
@@ -19,10 +20,11 @@ $data = json_decode($json, true);
     <tbody>
       <?php foreach($data as $item) { ?>
       <tr>
-        <td><?php echo $item["firstName"." ". "lastName"]?></td>
-        <td><?php echo $item["address"]?></td>
-        <td><?php echo $item["phoneNumber"]?></td>
+        <td><?php echo $item['firstName'] . ' ' . $item['lastName']; ?></td>
+        <td><?php echo $item['address']; ?></td>
+        <td><?php echo $item['phoneNumber']; ?></td>
       </tr>
+      <?php } ?>
     </tbody>
   </table>
 </body>
