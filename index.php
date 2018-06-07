@@ -1,5 +1,5 @@
-<? php
-$json = file_get_contents(_DIR_ . '/phones.json');
+<?php
+$json = file_get_contents(__DIR__ . '/phones.json');
 $data = json_decode($json, true);
 ?>
 
